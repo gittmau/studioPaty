@@ -119,9 +119,17 @@ extend: {
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
 
+html {
+scroll-behavior: smooth;
+}
+ 
 .material-symbols-outlined {
 font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
 }
+
+#patyHero{
+box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+} 
 
 .bento-grid {
 display: grid;
@@ -194,10 +202,6 @@ background: #8a4853;
 border-radius: 10px;
 }
 
-.fotoPaty {
-border: 10px solid #8a4853;
-border-radius: 35px 5px 35px !important;
-}
 
 .btnCarrossel {
 width: 40px;
@@ -239,8 +243,18 @@ color: #8a4853;
  #titulo-hero{
  font-size:40px!important;
  }  
+#patyHero{
+box-shadow:none;
+height: 400px;
+}
+ 
   
 }
+
+@media (min-width: 1024px) {
+#patyHero{
+height: 500px;
+} 
 
 
 @media (max-width: 768px) {
@@ -298,9 +312,8 @@ class="bg-primary text-on-primary px-10 py-4 rounded-full font-label text-lg hov
 class="absolute inset-4" style="background:linear-gradient(#a6606b, #8a4853, #a6606b);
  filter: blur(40px); opacity: 0.7; border-radius: 50%; transition: opacity 0.5s ease-in-out; z-index: -1;">
 </div>
- <img src="img/paty_perfil.png" alt="Studio Paty Hero"
-class="relative rounded-2xl w-full md:h-[500px] lg:h-[600px] object-cover "style="box-shadow:none;display:block;margin:0 auto;
-" />
+<img src="img/paty_perfil.png" alt="Studio Paty Hero"
+class="relative rounded-2xl w-full md:h-[500px] lg:h-[600px] object-cover" id="patyHero"/>
 
 </div>
 </div>
